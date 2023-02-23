@@ -35,7 +35,7 @@ const App = () => {
 
   const createTodo = (title) => {
     const newTodo = {
-      id: Date.now,
+      id: Date.now(),
       title,
       completed: false
     }
