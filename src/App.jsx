@@ -8,15 +8,15 @@ import TodoCreate from "./components/TodoCreate";
 import TodoFilter from "./components/TodoFilter";
 import TodoList from "./components/TodoList";
 
-const initialStateTodos = [
-  { id: 1, title:"Titulo 1", completed: true },
-  { id: 2, title:"Titulo 2", completed: false },
-  { id: 3, title:"Titulo 3", completed: false },
-  { id: 4, title:"Titulo 4", completed: false },
-  { id: 5, title:"Titulo 5", completed: true }
-];
+// const initialStateTodos = [
+//   { id: 1, title:"Titulo 1", completed: true },
+//   { id: 2, title:"Titulo 2", completed: false },
+//   { id: 3, title:"Titulo 3", completed: false },
+//   { id: 4, title:"Titulo 4", completed: false },
+//   { id: 5, title:"Titulo 5", completed: true }
+// ];
 
-//const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
+const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
 
 const reorder = (list, startIndex, endIndex) => {
   const result = [...list];
@@ -35,7 +35,7 @@ const App = () => {
 
   const createTodo = (title) => {
     const newTodo = {
-      id: todos.length +1,
+      id: Date.now,
       title,
       completed: false
     }
